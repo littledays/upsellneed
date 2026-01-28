@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Última Chance - Green Games</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Última oportunidade de garantir o combo Need for Speed.">
+    <style>
+        .urgent-box {
+            border: 1px solid var(--color-danger);
+            background: rgba(234, 46, 46, 0.05);
+            padding: var(--spacing-sm);
+            border-radius: var(--border-radius);
+            margin-bottom: var(--spacing-sm);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container fade-in">
+
+        <!-- Urgent Header -->
+        <h1 class="text-center" style="color: var(--color-text-main); font-size: 1.8rem;">Última chance de garantir o
+            combo <span class="text-highlight">Need for Speed</span></h1>
+        <p class="text-center text-white">Essa oferta não aparecerá novamente.</p>
+
+        <!-- Countdown -->
+        <div class="urgent-box">
+            <p style="color: var(--color-danger); font-weight: 700; margin:0;">TEMPO LIMITADO</p>
+            <div id="countdown" style="font-size: 2.5rem; font-weight: 800; color: #fff;">05:00</div>
+        </div>
+
+        <!-- Benefits Recap -->
+        <div class="card fade-in">
+            <h3 class="text-center text-white">O que você está levando:</h3>
+            <ul style="list-style: none; padding: 0; margin-top: 10px;">
+                <li class="checklist-item">
+                    <div class="checklist-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    Need for Speed Most Wanted
+                </li>
+                <li class="checklist-item">
+                    <div class="checklist-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    Need for Speed Carbon
+                </li>
+                <li class="checklist-item">
+                    <div class="checklist-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    Need for Speed Underground 1
+                </li>
+            </ul>
+        </div>
+
+        <!-- Benefits Grid Mini -->
+        <div class="benefits-grid fade-in" style="margin-top: 0;">
+            <div class="benefit-item" style="padding: 1rem;">
+                <div class="icon-box" style="width: 40px; height: 40px;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                    </svg>
+                </div>
+                <span class="text-white" style="font-size: 0.8rem;">Android & iOS</span>
+            </div>
+            <div class="benefit-item" style="padding: 1rem;">
+                <div class="icon-box" style="width: 40px; height: 40px;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="1" y1="1" x2="23" y2="23"></line>
+                        <path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"></path>
+                        <path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"></path>
+                        <path d="M10.71 5.05A16 16 0 0 1 22.58 9"></path>
+                        <path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"></path>
+                        <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                        <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                    </svg>
+                </div>
+                <span class="text-white" style="font-size: 0.8rem;">Funciona Offline</span>
+            </div>
+        </div>
+
+        <div style="margin: var(--spacing-sm) 0;"></div>
+
+        <!-- Price Section -->
+        <div class="price-box fade-in">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="discount-badge" style="background: var(--color-danger); color: white;">DESCONTO MÁXIMO</span>
+            <p class="old-price">De R$ 15,00</p>
+            <div class="new-price"><span>R$</span> 10,00</div>
+            <p style="font-size: 0.9rem; color: #888;">Desconto liberado somente agora</p>
+            <br>
+            <a href="https://www.ggcheckout.com/checkout/v4/zwowqq0z2PQ6T8TB3fUa" class="btn btn-primary"
+                style="background-color: var(--color-primary); color: #000; animation: pulse-glow 2s infinite;">APROVEITAR
+                AGORA</a>
+        </div>
+
+    </div>
+
+    <script src="particles.js"></script>
+    <script>
+        // Simple Countdown Timer
+        function startTimer(duration, display) {
+            var timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = 0;
+                }
+            }, 1000);
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+
+        window.onload = function () {
+            var fiveMinutes = 60 * 5,
+                display = document.querySelector('#countdown');
+            startTimer(fiveMinutes, display);
+        };
+    </script>
+
+</body>
+
+</html>
